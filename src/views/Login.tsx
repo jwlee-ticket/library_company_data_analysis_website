@@ -150,7 +150,7 @@ const LoginV2 = () => {
               로그인
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
-              <Typography>신규 사용자인가요?</Typography>
+              <Typography>신규 사용자인가요???</Typography>
               <Typography href={'/register'} component={Link} color='primary.main'>
                 계정 만들기
               </Typography>
