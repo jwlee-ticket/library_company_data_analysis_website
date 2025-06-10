@@ -36,3 +36,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # library_company_website
 
 ## 2025.06.02 clone completed
+
+## vercel 배포하는법
+1. npm run build로 빌드 잘 되는지 확인
+    1-1. 만약, 에러가 없다면 vercel에서도 오류 없이 배포됨
+    1-2. 에러가 있다면 vercel에서도 오류가 있는거니 수정해야함
+2. git에 push
+3. 콘솔 창에 npx vercel --prod 입력해서 배포
