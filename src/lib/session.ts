@@ -14,9 +14,13 @@ interface SessionContent {
 }
 
 function getSessionOptions(isRemember: boolean) {
+  // 환경변수가 없을 때 개발용 기본 패스워드 사용
+  const password = process.env.COOKIE_PASSWORD || 
+    'super-secret-password-that-is-at-least-32-characters-long-for-development-only'
+  
   return {
     cookieName: 'library-session',
-    password: process.env.COOKIE_PASSWORD!,
+    password: password,
     cookieOptions: {
       secure: process.env.NODE_ENV === 'production',
 
@@ -26,15 +30,19 @@ function getSessionOptions(isRemember: boolean) {
   }
 }
 
-export async function getSesstionWithOptoin(isRemember: boolean) {
+export async function getSessionWithOption(isRemember: boolean) {
   const session = await getIronSession<SessionContent>(await cookies(), getSessionOptions(isRemember))
 
   return session
 }
 
 export async function getSession() {
+  // 환경변수가 없을 때 개발용 기본 패스워드 사용
+  const password = process.env.COOKIE_PASSWORD || 
+    'super-secret-password-that-is-at-least-32-characters-long-for-development-only'
+    
   return getIronSession<SessionContent>(await cookies(), {
     cookieName: 'library-session',
-    password: process.env.COOKIE_PASSWORD!
+    password: password
   })
 }

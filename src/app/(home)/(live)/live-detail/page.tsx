@@ -587,7 +587,7 @@ const LiveDetailPage = () => {
                 {isEditing ? (
                   <TextField
                     fullWidth
-                    label='수익분기점 (BEP)'
+                    label='손익분기점 (BEP)'
                     type='text'
                     value={formatNumberWithCommas(editedData?.bep)}
                     onChange={e => {
@@ -612,7 +612,7 @@ const LiveDetailPage = () => {
                 ) : (
                   <TextField
                     fullWidth
-                    label='수익분기점 (BEP)'
+                    label='손익분기점 (BEP)'
                     value={formatNumberWithCommas(editedData?.bep)}
                     margin='normal'
                     disabled
@@ -869,7 +869,7 @@ const LiveDetailPage = () => {
                 {isEditing ? (
                   <TextField
                     fullWidth
-                    label='수익분기점 (BEP)'
+                    label='손익분기점 (BEP)'
                     type='text'
                     value={formatNumberWithCommas(editedData?.bep)}
                     onChange={e => {
@@ -894,7 +894,7 @@ const LiveDetailPage = () => {
                 ) : (
                   <TextField
                     fullWidth
-                    label='수익분기점 (BEP)'
+                    label='손익분기점 (BEP)'
                     value={formatNumberWithCommas(editedData?.bep)}
                     margin='normal'
                     disabled

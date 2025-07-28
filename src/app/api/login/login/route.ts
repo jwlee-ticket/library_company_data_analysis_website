@@ -1,7 +1,7 @@
 // app/api/login/login/route.ts
 import { NextResponse } from 'next/server'
 
-import { getSesstionWithOptoin } from '@/lib/sesson'
+import { getSessionWithOption } from '@/lib/session'
 
 export async function POST(request: Request) {
   try {
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     if (data.code === 200) {
       // isRemember 값에 따라 세션 옵션을 설정합니다.
-      const session = await getSesstionWithOptoin(isRemember)
+      const session = await getSessionWithOption(isRemember)
 
       session.userId = data.userId
       session.name = data.name
